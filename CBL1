@@ -568,7 +568,9 @@ ASK-USER.
     DISPLAY ' '                                                  
     DISPLAY 'ENTERED STRING IS ' WS-INPUT                        
     DISPLAY ' '                                                  
-    MOVE FUNCTION UPPER-CASE(WS-INPUT) TO WS-INPUT-UPPER.        
+    MOVE FUNCTION UPPER-CASE(WS-INPUT) TO WS-INPUT-UPPER
+    INITIALIZE WS-PART1
+               WS-PART2
     UNSTRING WS-INPUT DELIMITED BY SPACE INTO                    
              WS-PART1, WS-PART2                                  
     IF WS-PART2 NOT EQUAL SPACES THEN                            
